@@ -9,4 +9,6 @@ pipeline:
           namespace: default
       steps:
         - run:
+            container:
+              image: alpine:3.19
             script: echo "hello world"
