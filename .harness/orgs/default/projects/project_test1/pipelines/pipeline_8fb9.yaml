@@ -1,5 +1,12 @@
 pipeline:
+  description: Run a hello world step on a Kubernetes build infrastructure
+  tags:
+    ai_generated: ""
   stages:
-    - steps:
+    - runtime:
+        kubernetes:
+          connector: connector_K8sCluster_dfa4
+          namespace: default
+      steps:
         - run:
             script: echo "hello world"
